@@ -9,14 +9,15 @@ import org.springframework.stereotype.Service;
 
 import com.personal.springboot.web.model.Employee;
 
+
 @Service
 public class EmployeeService {
 	private static List<Employee> emps = new ArrayList<Employee>();
 	private static int empCount = 2;
 
 	static {
-		emps.add(new Employee(1, "iftekhar", new Date(), "M", "Programmer"));
-		emps.add(new Employee(2, "mahmud", new Date(), "M", "Developer")); 
+		emps.add(new Employee(1, "Mahmud", new Date(), "M", "Programmer"));
+		emps.add(new Employee(2, "Iftekhar", new Date(), "M", "Developer")); 
 	}
 
 	public List<Employee> retrieveEmp() {
@@ -39,6 +40,7 @@ public class EmployeeService {
 	public void deleteEmployee(Employee emp) {
 		emps.remove(emp);
 	}
+
 
 	public Employee retrieveEmployee(int id) {
 		for (Employee e : emps) {
